@@ -1,0 +1,51 @@
+/* src/Login.css */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;  /* 使容器至少有视口的高度 */
+  background-color: #f0f2f5;
+  width: 100vw; /* 添加宽度为视口宽度 */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 8px;
+}
+
+.login-form input,
+.login-form button {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  background-color: #0056b3;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.login-form button:hover {
+  background-color: #004494;
+}
+
+.login-form input:focus,
+.login-form button:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
