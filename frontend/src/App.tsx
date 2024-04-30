@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Login } from './Login';
-import HomePage from './HomePage';
+import MediaPlayer from './HomePage';
 
 const App: React.FC = () => {
   const [token, setToken] = useState<string | null>(localStorage.getItem('token'));
@@ -37,7 +37,7 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={token ? <HomePage /> : <Navigate to="/login" />} />
+        <Route path="/" element={token ? <MediaPlayer /> : <Navigate to="/login" />} />
         <Route path="/login" element={<Login onLoginSuccess={handleLoginSuccess} />} />
         <Route path="*" element={<Navigate to={token ? "/" : "/login"} />} />
       </Routes>
